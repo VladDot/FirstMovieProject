@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/VladDot/test/static/css/main.f855e6bc.css",
-    "main.js": "/VladDot/test/static/js/main.f70e1c0b.js",
-    "static/js/787.cb66a307.chunk.js": "/VladDot/test/static/js/787.cb66a307.chunk.js",
-    "static/media/logo.svg": "/VladDot/test/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/VladDot/test/index.html",
-    "main.f855e6bc.css.map": "/VladDot/test/static/css/main.f855e6bc.css.map",
-    "main.f70e1c0b.js.map": "/VladDot/test/static/js/main.f70e1c0b.js.map",
-    "787.cb66a307.chunk.js.map": "/VladDot/test/static/js/787.cb66a307.chunk.js.map"
+    "main.css": "/test/static/css/main.f855e6bc.css",
+    "main.js": "/test/static/js/main.f1848f35.js",
+    "static/js/787.cb66a307.chunk.js": "/test/static/js/787.cb66a307.chunk.js",
+    "static/media/logo.svg": "/test/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/test/index.html",
+    "main.f855e6bc.css.map": "/test/static/css/main.f855e6bc.css.map",
+    "main.f1848f35.js.map": "/test/static/js/main.f1848f35.js.map",
+    "787.cb66a307.chunk.js.map": "/test/static/js/787.cb66a307.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.f70e1c0b.js"
+    "static/js/main.f1848f35.js"
   ]
 }
