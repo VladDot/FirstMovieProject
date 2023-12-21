@@ -1,0 +1,1 @@
+export { generateImgUrl } from "./generateUrl";

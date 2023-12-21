@@ -1,0 +1,25 @@
+export const routes = {
+    home: "/",
+    login: "/login",
+    registration: "/registration",
+    error: "/*",
+    searchPage: "/search/:search",
+    movieDetails: "/movie/:movieId",
+    movies: "/movies/:category",
+    moviesCategory: {
+        popular: "/movies/popular",
+        nowPlaying: "/movies/now_playing",
+        upcoming: "/movies/upcoming",
+        topRated: "/movies/top_rated",
+    },
+    tvDetails: "/tvPage/:tvId",
+    tvShowes: "/tvShowes/:category",
+    tvShowesCategory: {
+        popular: "/tvShowes/popular",
+        airingToday: "/tvShowes/airing_today",
+        onTv: "/tvShowes/on_the_air",
+        topRated: "/tvShowes/top_rated",
+    },
+    people: "/people",
+    persone: "people/persone/:id",
+};
