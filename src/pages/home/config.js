@@ -1,8 +1,4 @@
-import {
-    getPopular,
-    getMoviesTrending,
-    getSearchedMovies,
-} from "../../utils/generateUrl";
+import { getMoviesTrending } from "../../utils/generateUrl";
 
 export const trandingBtns = [
     { text: "Today", requestUrl: getMoviesTrending("day") },

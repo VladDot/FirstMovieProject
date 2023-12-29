@@ -1,11 +1,14 @@
 import React from "react";
 
-import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import CardMovie from "../../../components/CardMovie";
 
-const KnownFor = ({ known_for, id }) => {
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+const KnownFor = ({ known_for }) => {
     return (
         <Swiper
             style={{

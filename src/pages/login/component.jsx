@@ -1,9 +1,10 @@
+import { useState } from "react";
+
 import { Form, Formik } from "formik";
 
-import FieldComponent from "../../components/FieldComponent";
-
 import { validationSchemas, initialValue } from "../login/config";
-import { useState } from "react";
+
+import FieldComponent from "../../components/FieldComponent";
 
 const Login = () => {
     const [isDisaled, setIsDisabled] = useState(false);
@@ -12,7 +13,7 @@ const Login = () => {
 
     return (
         <>
-            <div className=" w-[70%] ml-auto mr-auto mt-10">
+            <div className=" w-[70%] ml-auto mr-auto mt-10 ">
                 <h1>Login to your account</h1>
                 <p className="mt-4 mb-8">
                     In order to use the editing and rating capabilities of
@@ -35,7 +36,7 @@ const Login = () => {
                     disabled();
                 }}
             >
-                <Form className=" w-[70%] ml-auto mr-auto mt-8">
+                <Form className=" w-[70%] ml-auto mr-auto mt-8 ">
                     <FieldComponent
                         name="name"
                         type="text"
@@ -52,7 +53,7 @@ const Login = () => {
                     <button
                         disabled={isDisaled}
                         type="submit"
-                        className=" bg-blue border-2 rounded-full  py-2 px-7 text-main hover:bg-aqua hover:text-black transition-all duration-500 mt-4"
+                        className=" bg-blue border-2 rounded-full  py-2 px-7 text-main hover:bg-aqua hover:text-black transition-all duration-500 mt-2 mb-6"
                     >
                         Login
                     </button>

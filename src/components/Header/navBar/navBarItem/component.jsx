@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import { getStyles } from "./style";
@@ -14,7 +14,7 @@ const NavBarItem = ({
     const { dropDown, linkMenu, link } = getStyles(isActiveCategory);
 
     return (
-        <>
+        <div>
             {!categories && (
                 <Link
                     className="w-fit p-1  hover:text-aqua duration-300 hover:scale-110 "
@@ -46,7 +46,7 @@ const NavBarItem = ({
                     </div>
                 </div>
             )}
-        </>
+        </div>
     );
 };
 

@@ -26,6 +26,7 @@ const Burger = () => {
                     >
                         <span className={burger}></span>
                     </div>
+
                     {isActiveBurger && (
                         <div className={navigation}>
                             {navBar.map((navBarItem, idx) => (
@@ -41,9 +42,10 @@ const Burger = () => {
                             <MobileMd>
                                 {authorization.map(({ name, url }, idx) => (
                                     <Link
-                                        className="py-6  text-5xl hover:text-aqua hover:scale-110 duration-300"
+                                        className="py-4 animate-fadeIn hover:text-aqua hover:scale-110 duration-300"
                                         to={url}
                                         key={`${idx}-${name}-auth`}
+                                        onClick={blockScroll}
                                     >
                                         {name}
                                     </Link>

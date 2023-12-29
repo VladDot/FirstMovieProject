@@ -6,13 +6,14 @@ import "swiper/css";
 import Error from "../Error";
 import Loading from "../Loading";
 import CardMovie from "../CardMovie";
+import LineBg from "../bgLIne/component";
 import ToggleButton from "./ToggleButton";
 
 const TogglePoster = ({ btns }) => {
     const [error, setError] = useState(null);
     const [activeId, setActiveId] = useState(0);
-    const [isLoading, setIsLoading] = useState(false);
     const [actualList, setActualList] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         btns.forEach(({ requestUrl }, idx) => {
@@ -63,11 +64,14 @@ const TogglePoster = ({ btns }) => {
             {error && !isLoading && <Error error={error} />}
 
             {!isLoading && !error && (
-                <div className="h-[440px]">
+                <div className="h-[440px] relative mb-5">
+                    <span className="absolute max-w-[100%]  top-1/4 overflow-hidden">
+                        <LineBg />
+                    </span>
                     <Swiper
                         style={{
                             height: "440px",
-                            padding: "20px",
+                            padding: "20px 20px 28px",
                             margin: "10px 0",
                         }}
                         spaceBetween={40}
@@ -80,7 +84,7 @@ const TogglePoster = ({ btns }) => {
                             ? actualList.results.map(
                                   ({ title, poster_path, id }) => (
                                       <SwiperSlide
-                                          className=" shadow-lg  hover:scale-110 transition-all ease-in duration-300"
+                                          className=" shadow-lg  hover:scale-110 hover:shadow-lg transition-all ease-in duration-300"
                                           key={`movie${id}_${title}`}
                                           style={{ width: "200px" }}
                                       >

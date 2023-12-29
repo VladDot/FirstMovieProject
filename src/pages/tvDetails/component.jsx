@@ -1,19 +1,22 @@
 import React, { useEffect, useState } from "react";
-import useGetData from "../../hooks/useSetDataRedux";
-import { getTv } from "../../utils/generateUrl";
+
 import { useParams } from "react-router-dom";
-import Loading from "../../components/Loading";
-import Error from "../../components/Error";
+
+import { getTv } from "../../utils/generateUrl";
+
+import TvInfo from "./tvInfo";
+import { Mobile } from "../../responsive/component";
+import Player from "../../components/Player/component";
+import MovieBanner from "../movieDetails/movieDetailsBanner/component";
 
 const TVPage = () => {
     const params = useParams();
-    /*     const tvPage = useGetData(getTv(params.tvId)); */
-    /*   console.log(tvPage); */
 
     const [error, setError] = useState();
-    const [isLoading, setIsLoading] = useState(false);
-    const [dataTV, setDataTV] = useState(undefined);
     const [bgUrl, setBgUrl] = useState("");
+    const [dataTV, setDataTV] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
+
     useEffect(() => {
         try {
             setIsLoading(true);
@@ -27,7 +30,7 @@ const TVPage = () => {
                 .then((res) => {
                     setDataTV(res);
                     setBgUrl(
-                        `https://image.tmdb.org/t/p/w1920_and_h427_multi_faces/${res.backdrop_path}`
+                        `https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${res.backdrop_path}`
                     );
                 })
                 .catch((e) => {
@@ -36,29 +39,25 @@ const TVPage = () => {
                 .finally(() => setIsLoading(false));
         } catch (error) {}
     }, []);
-    console.log(dataTV);
+
     return (
         <div
-            className="max-w-full h-[80.5vh] bg-cover bg-center "
+            className="relative bg-cover bg-right pb-6 p-2"
             style={{ backgroundImage: `url(${bgUrl})` }}
         >
-            {isLoading && <Loading />}
-            {!!error && !isLoading && <Error error={error} />}
-            {dataTV && !isLoading && !error && (
-                <div className="flex gap-5 bg-cover bg-center lg:max-w-[70%] 2xl:max-w-[70%]  h-full m-auto backdrop-blur-[2px]">
-                    <div className="lg:w-[70%] 2xl:w-[70%] my-4">
-                        <img
-                            className=" "
-                            src={`https://image.tmdb.org/t/p/w500/${dataTV.poster_path}`}
-                            alt=""
-                        />
-                    </div>
-                    <div className="w-full ">
-                        <h1>{dataTV.title}</h1>
-                        <p>{dataTV.overview}</p>
-                    </div>
+            <div className="absolute inset-0 z-0 bg-black opacity-50 "></div>
+            <div className="relative z-50  w-[80%] m-auto minSm:flex minSm:w-full  minSm:gap-3 lg:w-[80%] xl:w-[70%] ">
+                <MovieBanner
+                    poster_path={dataTV.poster_path}
+                    isLoading={isLoading}
+                />
+                <TvInfo dataTV={dataTV} />
+            </div>
+            <Mobile>
+                <div className="relative z-50  w-[80%] m-auto mt-6  border-2  border-white h-[300px] bg-gray-600 flex justify-center items-center">
+                    <Player />
                 </div>
-            )}
+            </Mobile>
         </div>
     );
 };

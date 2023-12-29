@@ -1,9 +1,10 @@
+import { useState } from "react";
+
 import { navBar } from "./config";
 
-import { Desktop, NotDesktop } from "../../../responsive/component";
 import Burger from "./burger/component";
 import NavBarItem from "./navBarItem/component";
-import { useState } from "react";
+import { Desktop, NotDesktop } from "../../../responsive/component";
 
 const NavBar = () => {
     const [activeCategory, setActiveCategory] = useState("");

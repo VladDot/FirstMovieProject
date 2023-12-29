@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import useGetData from "../../hooks/data";
-import { getAllTv } from "../../utils/generateUrl";
+
 import { useLocation } from "react-router-dom";
+
 import { tvCategoryMenu } from "./config";
-import Loading from "../../components/Loading";
+
 import Error from "../../components/Error";
+import Loading from "../../components/Loading";
 import CardMovie from "../../components/CardMovie";
 
 const TVShow = () => {
@@ -35,11 +36,7 @@ const TVShow = () => {
             } catch (error) {}
         });
     }, [lastPathSegment]);
-    console.log(actualTVList);
-    /* 
-    const popularTv = useGetData(getAllTv("on_the_air"));
-    const topRatred = useGetData(getAllTv("top_rated"));
-    console.log(popularTv); */
+
     return (
         <div className=" max-w-[70%] m-auto my-7">
             {isLoading && <Loading />}

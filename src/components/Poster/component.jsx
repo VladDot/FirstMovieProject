@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getPerson, getPopular } from "../../utils/generateUrl";
+import { getPopular } from "../../utils/generateUrl";
 
 const Poster = () => {
     const [error, setError] = useState(null);

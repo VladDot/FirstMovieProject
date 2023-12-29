@@ -1,4 +1,5 @@
 import React from "react";
+
 import { generateImgUrl } from "../../../helpers";
 
 const PersonaPhoto = ({ profile_path, isLoadingPersons, name }) => {

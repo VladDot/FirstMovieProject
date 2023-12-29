@@ -7,11 +7,6 @@ import Loading from "../../components/Loading";
 import CardMovie from "../../components/CardMovie";
 
 const Movies = () => {
-    /*     const popularMovies = useGetData(getAllMovies("popular"));
-    console.log(popularMovies); */
-    /*     const nowPlayingMovies = useGetData(getAllMovies("now_playing"));
-    console.log(nowPlayingMovies); */
-
     const location = useLocation();
     const [error, setError] = useState(null);
     const [isLoading, setIsLoading] = useState(false);

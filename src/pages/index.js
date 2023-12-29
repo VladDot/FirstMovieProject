@@ -4,7 +4,7 @@ export { default as SearchPage } from "./searchPage";
 export { default as MovieDetails } from "./movieDetails";
 export { default as Movies } from "./movies";
 export { default as Person } from "./persona";
-export { default as PopularPeople } from "./popularPeople";
+export { PopularPeople } from "./popularPeople/index";
 export { default as Registration } from "./registration";
 export { default as TVPage } from "./tvDetails";
 export { default as TVShow } from "./tvShow";

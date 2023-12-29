@@ -1,8 +1,8 @@
 import {
-    AIRING_TODAY_TV_SHOWS,
-    ON_THE_AIR_TV_SHOWS,
     POPULAR_TV_SHOWS,
     TOP_RATED_TV_SHOWS,
+    ON_THE_AIR_TV_SHOWS,
+    AIRING_TODAY_TV_SHOWS,
 } from "../types";
 
 const initialPTvShowState = {
