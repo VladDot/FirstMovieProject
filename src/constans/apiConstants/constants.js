@@ -14,7 +14,6 @@ export const API_MOVIES_UPCOMING = `${API_URL}movie/upcoming?language=en-US&page
 export const API_MOVIE_CHANGE = `${API_URL}movie/movie_id/changes?page=1`;
 
 export const API_TV_CHANGE = `${API_URL}tv/series_id/changes?page=1`;
-
 ///////////////
 export const API_SEARCH_MOVIE = `${API_URL}search/movie?include_adult=false&language=en-US&page=1`;
 ////////////

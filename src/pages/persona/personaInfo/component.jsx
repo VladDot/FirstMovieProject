@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+
 import { getStyles } from "./style";
 
 const PersonaInfo = ({ name, birthday, biography }) => {
     const [isActive, setIsActive] = useState(false);
 
     const { readMore, blurLine } = getStyles(isActive);
+
     return (
         <div>
             <div className=" relative">
@@ -15,21 +17,17 @@ const PersonaInfo = ({ name, birthday, biography }) => {
                     {birthday}
                 </h2>
                 <h2 className="mb-2 mt-5 font-semibold	pl-2 text-xl">
-                    Biography
+                    Biography :
                 </h2>
                 <p
                     className={readMore}
-                    onClick={() => {
-                        setIsActive(!isActive);
-                    }}
+                    onClick={() => setIsActive(!isActive)}
                 >
                     {biography ? biography : "biography is missing"}
                 </p>
                 <span
-                    onClick={() => {
-                        setIsActive(!isActive);
-                    }}
                     className={blurLine}
+                    onClick={() => setIsActive(!isActive)}
                 ></span>
             </div>
         </div>

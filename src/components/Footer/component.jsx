@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Social } from "../../assets/icons";
 import Logo from "../logo/component";
+import { Social } from "../../assets/icons";
 import { MobileMd, NotMobileMd } from "../../responsive/component";
 
 const Footer = () => {

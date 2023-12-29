@@ -1,69 +1,45 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import KnownFor from "./knownFor";
+import { getPeople, getPerson } from "../../utils/generateUrl";
+import { useGetData1 } from "../../hooks";
 
+import KnownFor from "./knownFor";
+import PersonaInfo from "./personaInfo";
 import Error from "../../components/Error";
 import Loading from "../../components/Loading";
-import { getPeople, getPerson } from "../../utils/generateUrl";
 import PersonaPhoto from "./personaPhoto/component";
-import PersonaInfo from "./personaInfo";
 
 const Persona = () => {
-    const params = useParams();
+    const { id } = useParams();
+    const [knownFor, setKnownFor] = useState();
 
-    const [error, setError] = useState();
-    const [data, setData] = useState(undefined);
-    const [isLoading, setLoading] = useState(false);
+    const { data, isLoading, error } = useGetData1(getPerson(id));
+    const isData = !!Object.keys(data).length;
 
-    const [errorPersons, setErrorPersons] = useState();
-    const [dataPersons, setDataPersons] = useState(undefined);
-    const [isLoadingPersons, setLoadingPersons] = useState(false);
+    const {
+        data: person,
+        isLoading: isLoadingPerson,
+        error: errorPerson,
+    } = useGetData1(getPeople());
+    const isPerson = !!person?.results?.length;
 
     useEffect(() => {
-        try {
-            setLoading(true);
-            fetch(getPerson(params.id))
-                .then((res) => {
-                    if (!res.ok) {
-                        setError(res.status);
-                    }
-                    return res.json();
-                })
-                .then(setData)
-                .catch((e) => {
-                    console.error("Error during fetch:", e);
-                })
-                .finally(() => setLoading(false));
-        } catch (error) {}
-
-        try {
-            setLoadingPersons(true);
-            fetch(getPeople())
-                .then((res) => {
-                    if (!res.ok) {
-                        setErrorPersons(res.status);
-                    }
-                    return res.json();
-                })
-                .then(setDataPersons)
-                .catch((e) => {
-                    console.error("Error", e);
-                })
-                .finally(() => setLoadingPersons(false));
-        } catch (errorPersons) {}
-    }, []);
-    console.log(data);
-    console.log(dataPersons);
+        if (isPerson) {
+            const known = person.results.find(
+                ({ id: personId }) => personId === parseInt(id)
+            );
+            setKnownFor(known.known_for);
+        }
+    }, [person, id, isPerson]);
 
     return (
         <div className="w-[70%] m-auto mt-5 minSm:w-[90%] lg:w-[80%] xl:w-[70%]">
             {isLoading && <Loading />}
+
             {!!error && !isLoading && <Error error={error} />}
-            {data && !isLoading && !error && (
+
+            {isData && !isLoading && !error && (
                 <div className="minSm:flex minSm:w-full minSm:p-2 minSm:gap-3 ">
                     <PersonaPhoto
                         profile_path={data.profile_path}
@@ -82,23 +58,11 @@ const Persona = () => {
                     <p className="font-semibold	 text-xl mb-4">Known For</p>
                 </div>
 
-                {isLoadingPersons && <Loading />}
-                {!!error && !isLoading && <Error error={errorPersons} />}
-                {dataPersons &&
-                    !isLoadingPersons &&
-                    dataPersons.results.map(({ id, known_for, name }) => {
-                        {
-                            if (id === parseInt(params.id)) {
-                                return (
-                                    <KnownFor
-                                        key={`movie_${id}`}
-                                        known_for={known_for}
-                                        id={id}
-                                    />
-                                );
-                            }
-                        }
-                    })}
+                {isLoadingPerson && <Loading />}
+
+                {!!errorPerson && !isLoading && <Error error={errorPerson} />}
+
+                {isPerson && !!knownFor && <KnownFor known_for={knownFor} />}
             </div>
         </div>
     );

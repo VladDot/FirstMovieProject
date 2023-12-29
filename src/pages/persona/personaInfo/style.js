@@ -4,7 +4,7 @@ import "./styles.css";
 export const getStyles = (isActive) => ({
     readMore: clsx(
         " w-auto flex p-2 ",
-        { "height-full": isActive },
+        { "h-full": isActive },
         { "max-h-[220px] overflow-hidden ": !isActive }
     ),
     blurLine: clsx(" ", { " ": isActive }, { " afterLine": !isActive }),

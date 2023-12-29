@@ -1,4 +1,4 @@
-import { routes } from "../../../routes/routesConstants";
+import { routes } from "../../../router/routesConstants";
 
 export const navBar = [
     {
@@ -8,9 +8,9 @@ export const navBar = [
                 name: "Popular",
                 url: routes.moviesCategory.popular,
             },
-            { name: "Now playing", url: routes.moviesCategory.nowPlaying },
             { name: "Upcoming", url: routes.moviesCategory.upcoming },
             { name: "Top rated", url: routes.moviesCategory.topRated },
+            { name: "Now playing", url: routes.moviesCategory.nowPlaying },
         ],
     },
     {
@@ -20,9 +20,9 @@ export const navBar = [
                 name: "Popular",
                 url: routes.tvShowesCategory.popular,
             },
-            { name: "Airing today", url: routes.tvShowesCategory.airingToday },
             { name: "On tv", url: routes.tvShowesCategory.onTv },
             { name: "Top rated", url: routes.tvShowesCategory.topRated },
+            { name: "Airing today", url: routes.tvShowesCategory.airingToday },
         ],
     },
     {

@@ -8,6 +8,7 @@ import FieldComponent from "../../components/FieldComponent";
 const Registration = () => {
     const [user, setUser] = useState([]);
     const [isDisaled, setIsDisabled] = useState(false);
+
     const disabledButton = () => setIsDisabled(true);
 
     console.log("user", user);
@@ -57,7 +58,7 @@ const Registration = () => {
                         placeholder="Enter your email"
                     />
                     <button
-                        className=" bg-blue border-2 rounded-lg  p-2 text-main hover:bg-aqua hover:text-black transition-all duration-500 mt-4"
+                        className=" bg-blue border-2 rounded-full  p-2 text-main hover:bg-aqua hover:text-black transition-all  py-2 px-7 duration-500 mt-2 mb-6"
                         type="submit"
                         disabled={isDisaled}
                     >

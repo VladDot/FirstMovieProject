@@ -1,10 +1,10 @@
 import * as Yup from "yup";
 
 export const initialValue = {
-    registrationName: "",
-    registrationPassword: "",
     confirmPassword: "",
+    registrationName: "",
     registrationEmail: "",
+    registrationPassword: "",
 };
 
 export const validationSchemas = Yup.object().shape({

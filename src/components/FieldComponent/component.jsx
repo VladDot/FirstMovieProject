@@ -3,8 +3,8 @@ import { Field } from "formik";
 const FieldComponent = ({
     name,
     type,
-    touched,
     value,
+    touched,
     onChange,
     textLabel,
     placeholder,
@@ -13,9 +13,6 @@ const FieldComponent = ({
     return (
         <Field name={name}>
             {({ meta, form, field }) => {
-                /*        console.log(meta); */
-                /*                 console.log({ meta: meta, form: form, field: field });
-                 */
                 const error =
                     meta.error && meta.touched ? meta.error : undefined;
                 const handleChange = async (e) => {

@@ -27,11 +27,20 @@ module.exports = {
                 minmin: "420px",
                 md: "760px",
                 laptop: "1024px",
-                mb: "300px",
             },
             backgroundImages: {
                 mainPoster: "url('/src/assets/img/poster.webp)",
                 bgTranding: "url('/src/assets/img/bg-tranding.svg)",
+            },
+            keyframes: {
+                fadeIn: {
+                    from: { opacity: "0" },
+                    to: { opacity: "1" },
+                },
+            },
+            animation: {
+                fadeIn: "fadeIn 1.5s ease-in-out forwards",
+                fadeInDropMenu: "fadeIn 2.3s ease-in-out forwards",
             },
         },
     },
