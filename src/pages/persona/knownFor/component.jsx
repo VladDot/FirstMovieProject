@@ -17,7 +17,6 @@ const KnownFor = ({ known_for }) => {
             }}
             spaceBetween={20}
             slidesPerView="auto"
-            onSlideChange={() => console.log("slide change")}
         >
             {known_for &&
                 known_for.map(

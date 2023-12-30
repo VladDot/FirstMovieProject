@@ -11,7 +11,6 @@ const Registration = () => {
 
     const disabledButton = () => setIsDisabled(true);
 
-    console.log("user", user);
     return (
         <div>
             <div className="w-[70%] ml-auto mr-auto mt-10">
@@ -28,7 +27,7 @@ const Registration = () => {
                 validationSchema={validationSchemas}
                 onSubmit={(values, error) => {
                     setUser([...user, values]);
-                    console.log("value", values);
+
                     disabledButton();
                 }}
             >

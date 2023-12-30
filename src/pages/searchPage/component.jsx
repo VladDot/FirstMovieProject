@@ -32,7 +32,6 @@ const SearchPage = () => {
                 .finally(() => setIsLoading(false));
         } catch (error) {}
     }, [search]);
-    console.log(serchResault);
 
     return (
         <div className=" max-w-[70%] m-auto my-7">

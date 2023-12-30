@@ -5,7 +5,6 @@ import Loading from "../../../components/Loading";
 import Player from "../../../components/Player/component";
 
 const TVInfo = ({ dataTV }) => {
-    console.log(dataTV);
     const {
         genres,
         overview,

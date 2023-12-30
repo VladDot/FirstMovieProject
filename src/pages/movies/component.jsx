@@ -34,7 +34,6 @@ const Movies = () => {
             } catch (error) {}
         });
     }, [lastPathSegment]);
-    console.log(actualMoviesList);
 
     return (
         <div className=" max-w-[70%] m-auto my-7">

@@ -32,7 +32,6 @@ const Login = () => {
                 initialValues={initialValue}
                 validationSchema={validationSchemas}
                 onSubmit={(values) => {
-                    console.log(values);
                     disabled();
                 }}
             >

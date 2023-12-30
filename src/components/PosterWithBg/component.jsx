@@ -31,7 +31,7 @@ const PosterToggleBg = ({ btns }) => {
             }
         });
     }, [activeId]);
-    /*     console.log(loading); */
+
     return (
         <div
             className="  bg-cover h-[400px] bg-center"
@@ -65,8 +65,6 @@ const PosterToggleBg = ({ btns }) => {
                     }}
                     spaceBetween={40}
                     slidesPerView="auto"
-                    /*                     onSlideChange={() => console.log("slide change")}
-                    onSwiper={(swiper) => console.log(swiper)} */
                     scrollbar={{ draggable: true }}
                 >
                     {actualList?.results
