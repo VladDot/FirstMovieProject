@@ -10,7 +10,7 @@ const Logo = ({ style, styleWidth }) => {
     const { styles } = getStyles();
     return (
         <Link
-            to={"/"}
+            to={"/FirstMovieProject"}
             className={style}
         >
             <LogoIcon className={clsx(styles, styleWidth)} />
