@@ -11,13 +11,13 @@ export const getStyles = (isActiveBurger) => ({
     ),
 
     burgerMenu: clsx(
-        "absolute flex items-center  justify-center right-0 top-0 z-50 transition-all duration-1000  shadow-2xl  after:rotate-90 after:bottom-0 before:rotate-90 before:top-0 ",
+        "absolute flex items-center  justify-center right-0 top-0 z-50 transition-all duration-700  shadow-2xl  after:rotate-90 after:bottom-0 before:rotate-90 before:top-0 ",
         { "w-full h-screen bg-blue z-50 whitespace-nowrap ": isActiveBurger },
         { "w-[100px] h-[100px] rounded-bl-full bg-aqua": !isActiveBurger }
     ),
 
     navigation: clsx(
-        "animation-fadeIn  text-4xl p-2 max-h-full w-full flex flex-col items-center justify-center delay-1000 transition-transform ",
+        "animation-fadeIn  text-4xl p-2 max-h-full w-full flex flex-col items-center justify-center delay-700 transition-transform ",
         {
             "": isActiveBurger,
         },
