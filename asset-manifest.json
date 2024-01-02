@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/FirstMovieProject/static/css/main.7e3896fa.css",
-    "main.js": "/FirstMovieProject/static/js/main.2993f834.js",
+    "main.css": "/FirstMovieProject/static/css/main.d27ae3f9.css",
+    "main.js": "/FirstMovieProject/static/js/main.d41b742b.js",
     "static/js/787.2b35ebb1.chunk.js": "/FirstMovieProject/static/js/787.2b35ebb1.chunk.js",
     "static/media/no_photo.png": "/FirstMovieProject/static/media/no_photo.9df7ad7467a58dcfd0cd.png",
     "static/media/twit.svg": "/FirstMovieProject/static/media/twit.be96e9fe9df720bbe760128f89172544.svg",
@@ -10,12 +10,12 @@
     "index.html": "/FirstMovieProject/index.html",
     "static/media/logo.svg": "/FirstMovieProject/static/media/logo.d7de821f5910cfb4d25280be5767f8fc.svg",
     "static/media/play-icon.svg": "/FirstMovieProject/static/media/play-icon.7ec10638edb3920580a60e2907d18077.svg",
-    "main.7e3896fa.css.map": "/FirstMovieProject/static/css/main.7e3896fa.css.map",
-    "main.2993f834.js.map": "/FirstMovieProject/static/js/main.2993f834.js.map",
+    "main.d27ae3f9.css.map": "/FirstMovieProject/static/css/main.d27ae3f9.css.map",
+    "main.d41b742b.js.map": "/FirstMovieProject/static/js/main.d41b742b.js.map",
     "787.2b35ebb1.chunk.js.map": "/FirstMovieProject/static/js/787.2b35ebb1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e3896fa.css",
-    "static/js/main.2993f834.js"
+    "static/css/main.d27ae3f9.css",
+    "static/js/main.d41b742b.js"
   ]
 }
