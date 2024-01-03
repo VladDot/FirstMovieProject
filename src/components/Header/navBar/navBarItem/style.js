@@ -10,7 +10,7 @@ export const getStyles = (isActiveCategory) => ({
         { "": !isActiveCategory }
     ),
     dropDown: clsx(
-        "bg-blue w-max absolute top-full flex flex-col p-2  left-1/2  -translate-x-1/2 transition-all duration-700",
+        "bg-blue w-max absolute top-full flex flex-col p-2  left-1/2  -translate-x-1/2 transition-all duration-500",
         { "h-[170px] opacity-100 ease-in": isActiveCategory },
         { "h-0 overflow-hidden opacity-0 ": !isActiveCategory }
     ),
